@@ -1,0 +1,174 @@
+/* match landing page color palette */
+:root {
+    --accent: hsl(214, 77%, 68%);
+
+    --theme: #fdfdfd;
+    --entry: #ffffff;
+    --primary: hsl(0, 0%, 10%);
+    --secondary: hsl(0, 0%, 40%);
+    --tertiary: hsl(0, 0%, 92%);
+    --content: hsl(0, 0%, 20%);
+    --border: hsl(0, 0%, 90%);
+}
+
+/* list page background should match site background, not the gray offset */
+.list {
+    background: var(--theme);
+}
+
+/* header: strip the border, lighten it up */
+.header {
+    background: var(--theme);
+    border-bottom: 1px solid var(--border);
+    box-shadow: none;
+}
+
+/* site title link in header */
+.logo a {
+    font-size: 0.95rem;
+    letter-spacing: 0.05rem;
+    color: var(--secondary);
+    font-weight: 400;
+}
+
+.logo a:hover {
+    color: var(--primary);
+}
+
+/* nav menu links */
+#menu a {
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+#menu a:hover,
+#menu a span.active {
+    color: var(--accent);
+}
+
+/* post list entries */
+.post-entry {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--entry);
+    transition: border-color 0.1s ease-out, box-shadow 0.1s ease-out;
+}
+
+.post-entry:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 12px hsla(214, 77%, 68%, 0.12);
+}
+
+/* post entry title */
+.entry-header h2 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.post-entry:hover .entry-header h2 {
+    color: var(--accent);
+}
+
+/* post entry summary text */
+.entry-content p {
+    color: var(--secondary);
+    font-size: 0.92rem;
+}
+
+/* post meta (date etc.) */
+.entry-footer,
+.post-meta {
+    color: var(--secondary);
+    font-size: 0.82rem;
+}
+
+/* page header (e.g. "Posts") */
+.page-header h1 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.08rem;
+    color: var(--primary);
+}
+
+/* single post: article links use accent */
+.post-content a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: hsla(214, 77%, 68%, 0.4);
+}
+
+.post-content a:hover {
+    text-decoration-color: var(--accent);
+}
+
+/* post title on single page */
+.post-title {
+    letter-spacing: 0.03rem;
+}
+
+/* pagination */
+.pagination a {
+    color: var(--accent);
+    border-color: var(--border);
+}
+
+.pagination a:hover {
+    border-color: var(--accent);
+}
+
+/* theme toggle button */
+#theme-toggle svg {
+    stroke: var(--secondary);
+}
+
+/* resume page */
+.post-title {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+.post-description {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.resume-sections {
+    margin-top: 1.5rem;
+}
+
+.resume-section {
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--border);
+    color: var(--secondary);
+}
+
+.resume-section:first-child {
+    border-top: none;
+}
+
+.resume-section h3 {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+}
+
+.code {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    background: var(--tertiary);
+    color: var(--secondary);
+    border-radius: 4px;
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace;
+    font-size: 0.85rem;
+}
+
+.todo {
+    color: var(--accent);
+}

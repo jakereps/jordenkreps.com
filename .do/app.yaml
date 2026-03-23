@@ -1,0 +1,13 @@
+name: jordenkreps-com
+static_sites:
+  - name: jordenkreps-com
+    github:
+      repo: jordenkreps/jordenkreps.com
+      branch: main
+      deploy_on_push: true
+    build_command: hugo --minify
+    output_dir: public
+    environment_slug: hugo
+    envs:
+      - key: HUGO_VERSION
+        value: "0.154.5"

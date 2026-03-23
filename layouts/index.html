@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Site.Title }}</title>
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <div id="landing">
+    <div id="info">
+      <img src="/assets/img/profile.png" alt="profile">
+      <h1>{{ .Site.Params.name | default .Site.Title }}</h1>
+      <ul id="nav">
+        <li><a href="/posts/"><span class="idx">[<span class="idx-digit">00</span>]</span> blog</a></li>
+        <li><a href="/resume/"><span class="idx">[<span class="idx-digit">01</span>]</span> resume</a></li>
+        <li><a href="https://www.linkedin.com/in/jordenkreps" target="_blank" rel="noopener"><span class="idx">[<span class="idx-digit">02</span>]</span> contact</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
