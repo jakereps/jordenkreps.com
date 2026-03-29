@@ -3,6 +3,9 @@ title: "Jorden Kreps"
 description: "Software Engineer"
 layout: "single"
 hideMeta: true
+build:
+  list: never
+  render: always
 ---
 
 <div class="resume-sections">

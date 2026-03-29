@@ -1,8 +1,32 @@
 name: jordenkreps-com
+domains:
+  - domain: jordenkreps.com
+    type: PRIMARY
+  - domain: www.jordenkreps.com
+    type: ALIAS
+ingress:
+  rules:
+    - match:
+        path:
+          prefix: /
+      component:
+        name: jordenkreps-com
+    - match:
+        authority:
+          exact: ${STARTER_DOMAIN}
+      redirect:
+        authority: jordenkreps.com
+        redirect_code: 301
+    - match:
+        authority:
+          exact: www.jordenkreps.com
+      redirect:
+        authority: jordenkreps.com
+        redirect_code: 301
 static_sites:
   - name: jordenkreps-com
     github:
-      repo: jordenkreps/jordenkreps.com
+      repo: jakereps/jordenkreps.com
       branch: main
       deploy_on_push: true
     build_command: hugo --minify

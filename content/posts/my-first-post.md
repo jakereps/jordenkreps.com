@@ -1,11 +1,7 @@
 +++
-title = 'My First Post'
-date = 2024-01-14T07:07:07+01:00
-draft = true
+title = 'Here we go again'
+date = 2026-03-29
+draft = false
 +++
 
-## Introduction
-
-This is **bold** text, and this is _emphasized_ text.
-
-Visit the [Hugo](https://gohugo.io) website!
+Another year, another refactor...

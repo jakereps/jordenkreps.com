@@ -41,6 +41,12 @@
     font-size: 0.9rem;
 }
 
+#menu a svg {
+    vertical-align: -0.1em;
+    width: 0.9em;
+    height: 0.9em;
+}
+
 #menu a:hover,
 #menu a span.active {
     color: var(--accent);
